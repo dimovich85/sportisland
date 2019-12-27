@@ -1,19 +1,170 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv='X-UA-Compatible' content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<link rel="shortcut icon" href="favicon.png">
-	<title>Document</title>
-	<link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,800,900&display=swap&subset=cyrillic" rel="stylesheet">
-	<link rel="stylesheet" href="./css/styles.css">
-</head>
-<body>
+{% set title = 'Блог' %}
+{% include '_start.html' %}
+{% include '_header.html' %}
 
+<main class="main-content">
+	<div class="wrapper">
+		{% 
+			set links = [
+				{ url:'blog.html', text: 'Блог'}
+			] 
+		%}
+		{% include '_breadcrumbs.html' %}
+		<h1 class="page-heading">расписание</h1>
+		<div class="tabs">
+			<ul class="tabs-btns">
+			{% set days = [
+				['Пн', 'mon'], 
+				['Вт', 'tue'], 
+				['Ср', 'wed'], 
+				['Чт', 'thur'], 
+				['Пт', 'fri'], 
+				['Сб', 'sat'], 
+				['Вс', 'sun'] 
+			] %}
+			{% for day in days %}
+				<li class="tabs-btns__item">
+					<a href="#{{day[1]}}" class="tabs-btns__btn">
+						{{day[0]}}
+					</a>
+				</li>
+			{% endfor %}
+			</ul>
+			<ul class="tabs-content">
+				<li class="tabs-content__item">
+					<table class="schedule tabs-content__table">
+						<thead class="sr-only">
+							<tr>
+								<td colspan="4">
+									<span class="sr-only">
+										Понедельник
+									</span>
+								</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<p class="schedule__time">
+										07:00 - 22:00
+									</p>
+									<h2 class="schedule__h">
+										Фитнесс
+									</h2>
+									<p class="schedule__trainer">
+										с Литвиненко Ольгой
+									</p>
+									<p class="schedule__place">
+										фитнесс зал
+									</p>
+								</td>
+								<td>
+									<p class="schedule__time">
+										07:00 - 22:00
+									</p>
+									<h2 class="schedule__h">
+										Фитнесс
+									</h2>
+									<p class="schedule__trainer">
+										с Литвиненко Ольгой
+									</p>
+									<p class="schedule__place">
+										фитнесс зал
+									</p>
+								</td>
+								<td>
+									<p class="schedule__time">
+										07:00 - 22:00
+									</p>
+									<h2 class="schedule__h">
+										Фитнесс
+									</h2>
+									<p class="schedule__trainer">
+										с Литвиненко Ольгой
+									</p>
+									<p class="schedule__place">
+										фитнесс зал
+									</p>
+								</td>
+								<td>
+									<p class="schedule__time">
+										07:00 - 22:00
+									</p>
+									<h2 class="schedule__h">
+										Фитнесс
+									</h2>
+									<p class="schedule__trainer">
+										с Литвиненко Ольгой
+									</p>
+									<p class="schedule__place">
+										фитнесс зал
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p class="schedule__time">
+										07:00 - 22:00
+									</p>
+									<h2 class="schedule__h">
+										Фитнесс
+									</h2>
+									<p class="schedule__trainer">
+										с Литвиненко Ольгой
+									</p>
+									<p class="schedule__place">
+										фитнесс зал
+									</p>
+								</td>
+								<td>
+									<p class="schedule__time">
+										07:00 - 22:00
+									</p>
+									<h2 class="schedule__h">
+										Фитнесс
+									</h2>
+									<p class="schedule__trainer">
+										с Литвиненко Ольгой
+									</p>
+									<p class="schedule__place">
+										фитнесс зал
+									</p>
+								</td>
+								<td>
+									<p class="schedule__time">
+										07:00 - 22:00
+									</p>
+									<h2 class="schedule__h">
+										Фитнесс
+									</h2>
+									<p class="schedule__trainer">
+										с Литвиненко Ольгой
+									</p>
+									<p class="schedule__place">
+										фитнесс зал
+									</p>
+								</td>
+								<td>
+									<p class="schedule__time">
+										07:00 - 22:00
+									</p>
+									<h2 class="schedule__h">
+										Фитнесс
+									</h2>
+									<p class="schedule__trainer">
+										с Литвиненко Ольгой
+									</p>
+									<p class="schedule__place">
+										фитнесс зал
+									</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</li>
+			</ul>
+		</div>
+	</div>
+</main>
 
-<script src="./js/js.js"></script>
-</body>
-</html>
+{% include '_footer.html' %}

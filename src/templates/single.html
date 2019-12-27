@@ -1,19 +1,51 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv='X-UA-Compatible' content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<link rel="shortcut icon" href="favicon.png">
-	<title>Document</title>
-	<link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,800,900&display=swap&subset=cyrillic" rel="stylesheet">
-	<link rel="stylesheet" href="./css/styles.css">
-</head>
-<body>
+{% set title = 'Статья - Рельефный пресс' %}
+{% include '_start.html' %}
+{% include '_header.html' %}
+
+<main class="main-content">
+	
+	<div class="wrapper">
+		{% 
+			set links = [
+				{ url:'blog.html', text: 'Блог'},
+				{
+					url: 'category.html',
+					text: 'Кардио'
+				},
+				{
+					url: 'single.html',
+					text: 'Рельефный пресс'
+				}
+			] 
+		%}
+		{% include '_breadcrumbs.html' %}
+	</div>
+	
+	<article class="main-article">
+		<header class="main-article__header">
+			<img src="img/blog__article_full.jpg" alt="" class="main-article__thumb">
+			<h1 class="main-article__h">Рельефный пресс</h1>
+		</header>
+		
+		<p>
+			Таким образом новая модель организационной деятельности позволяет оценить значение системы обучения кадров, соответствует насущным потребностям. Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании модели развития.
+		</p>
+
+		<p>
+			Значимость этих проблем настолько очевидна, что новая модель организационной деятельности в значительной степени обуславливает создание модели развития. Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности способствует подготовки и реализации систем массового участия. Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности в значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям. Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет оценить значение соответствующий условий активизации. Товарищи! новая модель организационной деятельности способствует подготовки и реализации дальнейших направлений развития.
+		</p>
+
+		<footer class="main-article__footer">
+			<time datetime="01-01-2020">1 января</time>
+			<a href="#" class="main-article__like like">
+				<span class="like__text">Нравится </span>
+				<span class="like__count">46</span>
+			</a>
+		</footer>
+
+	</article>
 
 
-<script src="./js/js.js"></script>
-</body>
-</html>
+</main>
+
+{% include '_footer.html' %}

@@ -1,19 +1,72 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv='X-UA-Compatible' content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<link rel="shortcut icon" href="favicon.png">
-	<title>Document</title>
-	<link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,800,900&display=swap&subset=cyrillic" rel="stylesheet">
-	<link rel="stylesheet" href="./css/styles.css">
-</head>
-<body>
+{% set title = 'Блог' %}
+{% include '_start.html' %}
+{% include '_header.html' %}
 
+<main class="main-content">
+	<div class="wrapper">
+		{% 
+			set links = [
+				{ url:'contacts.html', text: 'Контакты'}
+			] 
+		%}
+		{% include '_breadcrumbs.html' %}
+	</div>
+	<section class="contacts">
+		<div class="wrapper">
+			<h1 class="contacts__h">Контакты</h1>
+			<div class="map">
+				<a href="#" class="map__fallback">
+					<span class="sr-only">
+						Карта
+					</span>
+				</a>
+			</div>
+			<p class="contacts__info">
+				<span class="widget-address">
+					г. Москва, ул. Приречная 11
+				</span>
+				<span class="widget-working-time">
+					Работаем с 09:00 до 20:00
+				</span>
+				<a href="tel:88007003030" class="widget-phone">
+					8 800 700 30 30
+				</a>
+				<a href="mailto:sportisland@gmail.ru" class="widget-email">sportisland@gmail.ru</a>
+			</p>
+			<h2 class="main-heading contacts__h_form">
+				форма
+			</h2>
+			<form action="#" class="contacts__form contacts-form">
+				<label>
+					<span class="sr-only">
+						Имя
+					</span>
+					<input type="text" class="contacts-form__input" placeholder="Ваше имя">
+				</label>
+				<label>
+					<span class="sr-only">
+						Телефон
+					</span>
+					<input type="text" class="contacts-form__input" placeholder="Ваш телефон">
+				</label>
+				<label>
+					<span class="sr-only">
+						Почта
+					</span>
+					<input type="text" class="contacts-form__input" placeholder="Ваша почта">
+				</label>
+				<label>
+					<span class="sr-only">
+						Комментарий
+					</span>
+					<textarea name="" id="" cols="30" rows="10" class="contacts-form__textarea"></textarea>
+				</label>
+				<button class="contacts-form__btn btn">
+					Отправить
+				</button>
+			</form>
+		</div>
+	</section>
+</main>
 
-<script src="./js/js.js"></script>
-</body>
-</html>
+{% include '_footer.html' %}

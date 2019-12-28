@@ -1,19 +1,65 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv='X-UA-Compatible' content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<link rel="shortcut icon" href="favicon.png">
-	<title>Document</title>
-	<link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,800,900&display=swap&subset=cyrillic" rel="stylesheet">
-	<link rel="stylesheet" href="./css/styles.css">
-</head>
-<body>
+{% set title = 'Блог' %}
+{% include '_start.html' %}
+{% include '_header.html' %}
+
+<main class="main-content">
+	<div class="wrapper">
+		{% 
+			set links = [
+				{ url:'trainers.html', text: 'Тренеры'}
+			] 
+		%}
+		{% include '_breadcrumbs.html' %}
+	</div>
+
+	<section class="trainers">
+		<div class="wrapper">
+			<h1 class="page-heading trainers__h">Тренеры</h1>
+			<ul class="trainers-list">
+				<li class="trainers-list__item">
+					<article class="trainer">
+						<img src="img/trainers__trainer_pic1.png" alt="" class="trainer__thumb">
+						<h2 class="trainer__name">
+							Комзова Ольга
+						</h2>
+						<p class="trainer__text">
+							Сертифицированный специалист по Пилатесу (Matwork, Ring, Ball, miniball) и ZUMBA, ZUMBA by strong.
+						</p>
+						<a href="#" class="trainer__subscribe btn">записаться</a>
+					</article>
+				</li>
+				<li class="trainers-list__item">
+					<article class="trainer">
+						<img src="img/trainers__trainer_pic2.png" alt="" class="trainer__thumb">
+						<h2 class="trainer__name">
+							Юзвак Дмитрий
+						</h2>
+						<p class="trainer__text">
+							Хореограф. Преподаватель Dance Mix, Twerk, Strip dance и др направлений. Официальный представитель UBPF. Чемпионка Европы по фитнес Бикини. Тренер по дефиле. Персональный тренер тренажерного зала.
+						</p>
+						<a href="#" class="trainer__subscribe btn">записаться</a>
+					</article>
+				</li>
+				<li class="trainers-list__item">
+					<article class="trainer">
+						<img src="img/trainers__trainer_pic3.png" alt="" class="trainer__thumb">
+						<h2 class="trainer__name">
+							Рудь Валерий
+						</h2>
+						<p class="trainer__text">
+							Персональный тренер. МСМК по пауерлифтингу, неоднократный победитель соревнований.
+						</p>
+						<a href="#" class="trainer__subscribe btn">записаться</a>
+					</article>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+</main>
 
 
-<script src="./js/js.js"></script>
-</body>
-</html>
+
+
+
+{% include '_footer.html' %}

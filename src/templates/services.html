@@ -1,19 +1,69 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv='X-UA-Compatible' content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<link rel="shortcut icon" href="favicon.png">
-	<title>Document</title>
-	<link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,800,900&display=swap&subset=cyrillic" rel="stylesheet">
-	<link rel="stylesheet" href="./css/styles.css">
-</head>
-<body>
+{% set title = 'Блог' %}
+{% include '_start.html' %}
+{% include '_header.html' %}
+
+<main class="main-content">
+	<h1 class="sr-only">Услуги</h1>
+	<div class="wrapper">
+		{% 
+			set links = [
+				{ url:'services.html', text: 'Услуги'}
+			] 
+		%}
+		{% include '_breadcrumbs.html' %}
+
+		{% 
+			set services = [
+				{ 
+					img: 'services__service_pic1.jpg',
+					name: 'ТРЕНАЖЕРНЫЙ ЗАЛ',
+					text: 'Спорт клуб  в Москве «SportIsland» является современным фитнес клубом по проведению тренировок различной направленности и стиля. В тренажерном зале можно развивать силы своего организма и укреплять здоровье.',
+					price: '1200' 
+				},
+				{ 
+					img: 'blog__category_thmb1.jpg',
+					name: 'ЖЕНСКИЙ ФИТНЕС',
+					text: 'В клубе «SportIsland» вам предложат фитнес программы различных направлений и уровней подготовленности: как для новичков, так и для опытных атлетов. Поставьте себе цель и опытные тренеры приведут вас к телу вашей мечты!',
+					price: '2200' 
+				},
+				{ 
+					img: 'services__service_pic2.jpg',
+					name: 'ЕДИНОБОРСТВА',
+					text: 'Сегодня физическая и духовная подготовка, способность защитить себя и близких очень актуальны. Предлагаем следующие классы по самообороне и боевых искусств: Спортивная борьба - это единоборство двух соперников, использующих в поединке свои физические и морально-волевые качества для достижения победы. Бокс - контактный вид спорта, в котором соперники наносят друг другу удары кулаками. Разрешены удары только выше пояса.',
+					price: '1800' 
+				}
+
+			]
+		%}
+
+		<ul class="services-list">
+		{% for service in services %}
+			<li class="services-list__item">
+				<article class="service">
+					<h2 class="service__name">
+						{{ service.name }}
+					</h2>
+					<p class="service__text">
+						{{ service.text }}
+					</p>
+					<p class="service__action">
+						<a href="#" class="service__subscribe btn">записаться</a>
+						<strong class="service__price price">
+							{{ service.price }}
+							<span class="price__unit">р./мес.</span>
+						</strong>
+					</p>
+					<img src="img/{{ service.img }}" alt="" class="service__thumb">
+				</article>
+			</li>
+		{% endfor %}
+		</ul>
+	</div>
+
+</main>
 
 
-<script src="./js/js.js"></script>
-</body>
-</html>
+
+
+
+{% include '_footer.html' %}

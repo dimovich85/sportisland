@@ -1,19 +1,118 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv='X-UA-Compatible' content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<link rel="shortcut icon" href="favicon.png">
-	<title>Document</title>
-	<link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,800,900&display=swap&subset=cyrillic" rel="stylesheet">
-	<link rel="stylesheet" href="./css/styles.css">
-</head>
-<body>
+{% set title = 'Цены' %}
+{% include '_start.html' %}
+{% include '_header.html' %}
+
+<main class="main-content">
+	<h1 class="sr-only">Цены на наши услуги и клубные карты</h1>
+	<div class="wrapper">
+		{% 
+			set links = [
+				{ url:'prices.html', text: 'Цены'}
+			] 
+		%}
+		{% include '_breadcrumbs.html' %}
+		<section class="prices">
+			<h2 class="page-heading trainers__h prices__h">Цены</h2>
+			<table>
+				<thead>
+					<tr>
+						<td>Услуга</td>
+						<td>Разовая покупка</td>
+						<td>1 месяц</td>
+						<td>6 месяцев</td>
+						<td>12 месяцев</td>
+					</tr>
+				</thead>
+				<tbody>
+					{% set data = [
+						['Фитнес', 200, 900, 4800, 9000 ],
+						['Тренажерный зал', 200, 900, 4800, 9000 ],
+						['Женский фитнес', 200, 1100, 6000, 11000],
+						['Бокс', 200, 900, 4800, 9000 ]
+					] %}
+					{% for service in data %}
+					<tr>
+						{% for option in service %}
+						<td> 
+							{{ option }}
+							{% if loop.index !== 1 %}
+							<span>
+								р.-
+							</span>
+							{% endif %}
+						</td>
+						{% endfor %}
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</section>
+		<section class="cards">
+			<h2 class="main-heading cards__h">
+				клубные карты
+			</h2>
+			<ul class="cards__list row">
+				<li class="card">
+					<h3 class="card__name">
+						полный день
+					</h3>
+					<p class="card__time">
+						7:00 &ndash; 22:00
+					</p>
+					<p class="card__price price">
+						3200 <span class="price__unit">р.-/мес.</span>
+					</p>
+					<ul class="card__features">
+						<li class="card__feature">Безлимит посещений клуба</li>
+						<li class="card__feature">Вводный инструктаж</li>
+						<li class="card__feature">Групповые занятия</li>
+						<li class="card__feature">Сауна</li>
+					</ul>
+					<a href="#" class="card__buy btn">купить</a>
+				</li>
+				<li class="card">
+					<h3 class="card__name">
+						полный день
+					</h3>
+					<p class="card__time">
+						7:00 &ndash; 22:00
+					</p>
+					<p class="card__price price">
+						3200 <span class="price__unit">р.-/мес.</span>
+					</p>
+					<ul class="card__features">
+						<li class="card__feature">Безлимит посещений клуба</li>
+						<li class="card__feature">Вводный инструктаж</li>
+						<li class="card__feature">Групповые занятия</li>
+						<li class="card__feature">Сауна</li>
+					</ul>
+					<a href="#" class="card__buy btn">купить</a>
+				</li>
+				<li class="card">
+					<h3 class="card__name">
+						полный день
+					</h3>
+					<p class="card__time">
+						7:00 &ndash; 22:00
+					</p>
+					<p class="card__price price">
+						3200 <span class=" price__unit">р.-/мес.</span>
+					</p>
+					<ul class="card__features">
+						<li class="card__feature">Безлимит посещений клуба</li>
+						<li class="card__feature">Вводный инструктаж</li>
+						<li class="card__feature">Групповые занятия</li>
+						<li class="card__feature">Сауна</li>
+					</ul>
+					<a href="#" class="card__buy btn">купить</a>
+				</li>
+			</ul>
+		</section>
+	</div>
+</main>
 
 
-<script src="./js/js.js"></script>
-</body>
-</html>
+
+
+
+{% include '_footer.html' %}

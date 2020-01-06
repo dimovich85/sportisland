@@ -1,0 +1,70 @@
+.widget-contacts{
+	display: block;
+
+	&__phone{
+		font-weight: @fMedium;
+		display: block;
+		line-height: 1;
+		color: #fff;
+		font-size: 24px;
+		display: block;
+		padding-top: 10px;
+		padding-bottom: 5px;
+		padding-right: 35px;
+		background-image: url(../img/svg/phone.svg);
+		background-size: 25px 25px;
+		background-repeat: no-repeat;
+		background-position: right center;
+	}
+
+	&__address{
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		color: #999999;
+		font-size: 12px;
+	}
+}
+
+.footer .widget-contacts{
+	&__phone{
+		padding-right: 0;
+		padding-left: 35px;
+		background-position: left center;
+	}
+}
+
+.widget-contact-mail{
+	font-size: 12px;
+	a{
+		color: #999999;
+		text-decoration: underline;
+	}
+}
+
+.widget-social-links{
+	display: inline-block;
+	vertical-align: middle;
+	@size: 36px;
+	width: @size;
+	height: @size;
+	background-size: 15px;
+	background-position: center;
+	background-repeat: no-repeat;
+	border: 1px solid #18191b;
+	& + &{
+		margin-left: 15px;
+	}
+	&.fb{
+		background-image: url(../img/svg/facebook-app-symbol.svg);
+	}
+	&.vk{
+		background-image: url(../img/svg/vk.svg);
+	}
+	&.youtube{
+		background-image: url(../img/svg/youtube-symbol.svg);
+	}
+	&.insta{
+		background-image: url(../img/svg/instagram.svg);		
+	}
+}

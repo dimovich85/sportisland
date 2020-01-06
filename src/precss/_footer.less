@@ -1,0 +1,38 @@
+.footer{
+	padding-top: 50px;
+	padding-bottom: 25px;
+	background-color: @bg;
+	.main-header{
+		margin-bottom: 0;
+		padding-top: 5px;
+		padding-bottom: 35px;
+	}
+	.slogan{
+		color: #999999;
+		font-weight: @fNormal;
+		font-size: 11px;
+	}
+}
+
+.main-footer{
+	border-top: 1px solid #1f2021;
+	padding-top: 35px;
+
+	&__row{
+		align-items: center;
+	}
+
+	&__widget{
+		.col();
+		.size(4);
+		.size-sm(6);
+		color: #999999;
+
+		&_copyright{
+			font-size: 14px;
+		}
+		&_social{
+			text-align: right;
+		}
+	}
+}

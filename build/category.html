@@ -14,7 +14,7 @@ single.html
   </head>
   <body>
     <header class="main-header">
-      <div class="wrapper">
+      <div class="wrapper main-header__wrap">
         <a href="#" class="main-header__logolink" aria-label="Логотип-ссылка на Главную">
           <img src="img/logo.png" alt="">
         </a>
@@ -23,7 +23,7 @@ single.html
             <li>
               <a href="services.html">Услуги</a>
             </li>
-            <li>
+            <li class="active">
               <a href="trainers.html">Тренеры</a>
             </li>
             <li>
@@ -111,7 +111,7 @@ single.html
     </main>
     <div class="footer">
       <header class="main-header">
-        <div class="wrapper">
+        <div class="wrapper main-header__wrap">
           <a href="#" class="main-header__logolink" aria-label="Логотип-ссылка на Главную">
             <img src="img/logo.png" alt="">
             <span class="slogan">Твой фитнес клуб всегда рядом!</span>
@@ -121,7 +121,7 @@ single.html
               <li>
                 <a href="services.html">Услуги</a>
               </li>
-              <li>
+              <li class="active">
                 <a href="trainers.html">Тренеры</a>
               </li>
               <li>
@@ -141,27 +141,29 @@ single.html
           </address>
         </div>
       </header>
-      <footer class="main-footer wrapper row">
-        <div class="main-footer__widget main-footer__widget_copyright">
-          <span class="widget-text"> © 2019 Все права защищены. SportIsland </span>
-        </div>
-        <div class="main-footer__widget">
-          <p class="widget-contact-mail"> Если у вас возникли вопросы, пожалуйста свяжитесь с нами по почте <a href="mailto:sportisland@gmail.ru">sportisland@gmail.ru</a>
-          </p>
-        </div>
-        <div class="main-footer__widget">
-          <a href="#" class="widget-social-links">
-            <span class="sr-only"> Мы в Facebook! </span>
-          </a>
-          <a href="#" class="widget-social-links">
-            <span class="sr-only"> Мы в VK! </span>
-          </a>
-          <a href="#" class="widget-social-links">
-            <span class="sr-only"> Мы в YouTube! </span>
-          </a>
-          <a href="#" class="widget-social-links">
-            <span class="sr-only"> Мы в Instagram! </span>
-          </a>
+      <footer class="main-footer wrapper">
+        <div class="row main-footer__row">
+          <div class="main-footer__widget main-footer__widget_copyright">
+            <span class="widget-text"> © 2019 Все права защищены. SportIsland </span>
+          </div>
+          <div class="main-footer__widget">
+            <p class="widget-contact-mail"> Если у вас возникли вопросы, пожалуйста свяжитесь с нами по почте <a href="mailto:sportisland@gmail.ru">sportisland@gmail.ru</a>
+            </p>
+          </div>
+          <div class="main-footer__widget main-footer__widget_social">
+            <a href="#" class="widget-social-links fb">
+              <span class="sr-only"> Мы в Facebook! </span>
+            </a>
+            <a href="#" class="widget-social-links vk">
+              <span class="sr-only"> Мы в VK! </span>
+            </a>
+            <a href="#" class="widget-social-links youtube">
+              <span class="sr-only"> Мы в YouTube! </span>
+            </a>
+            <a href="#" class="widget-social-links insta">
+              <span class="sr-only"> Мы в Instagram! </span>
+            </a>
+          </div>
         </div>
       </footer>
     </div>

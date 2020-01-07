@@ -11,4 +11,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,800,900&display=swap&subset=cyrillic" rel="preload stylesheet">
 	<link rel="stylesheet" href="./css/styles.css">
 </head>
+{% if title !== 'Главная' %}
+<body class="inner">
+{% else %}
 <body>
+{% endif %}

@@ -1,4 +1,4 @@
-single.html{% set title = 'Кардио' %}
+{% set title = 'Кардио' %}
 {% include '_start.html' %}
 {% include '_header.html' %}
 
@@ -6,9 +6,21 @@ single.html{% set title = 'Кардио' %}
 	<h1 class="sr-only">
 		Страница категории Кардио в блоге сайта спортклуба SportIsland
 	</h1>
+	<div class="wrapper">
+		{% 
+			set links = [
+				{ url:'blog.html', text: 'Блог'},
+				{
+					url: 'category.html',
+					text: 'Кардио'
+				}
+			] 
+		%}
+		{% include '_breadcrumbs.html' %}
+	</div>
 	<section class="category-posts">
 		<div class="wrapper">
-			<h2 class="main-heading category-post__h">
+			<h2 class="main-heading category-posts__h">
 				кардио
 			</h2>
 			<ul class="posts-list">
@@ -65,8 +77,15 @@ single.html{% set title = 'Кардио' %}
 				<h3 class="sr-only">Навигация</h3>
 				<ul class="pagination__links">
 					{% for num in range(1,6) %}
-					<li class="pagination-link">
-						<a href="#" class="pagination-link__a pagination__link_current">{{ num }}</a>
+					{% if num === 1  %}
+						{% set current = ' pagination__block_current' %}
+					{% else %}
+						{% set current = '' %}
+					{% endif %}
+					<li class="pagination__block{{ current }}">
+						<a href="#" class="pagination__link">
+							{{ num }}
+						</a>
 					</li>
 					{% endfor %}
 				</ul>

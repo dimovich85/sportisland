@@ -1,0 +1,23 @@
+.breadcrumbs{
+	margin: 0;
+	margin-bottom: 75px;
+	padding: 0;
+	display: flex;
+	align-items: baseline;
+
+	&__item{
+		font-size: 14px;
+		padding-right: 5px;
+		&:last-child a{
+			color: #999999;
+		}
+		& + &:before{
+			content: '/';
+			color: #fff;
+		}
+	}
+
+	&__link{
+		color: #fff;
+	}
+}

@@ -68,3 +68,54 @@
 		background-image: url(../img/svg/instagram.svg);		
 	}
 }
+
+.widget-address,
+.widget-working-time,
+.widget-phone,
+.widget-email{
+	font-size: 16px;
+	color: #cccccc;
+	padding-left: 30px;
+	position: relative;
+	&:after{
+		content: '';
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		@size: 25px;
+		width: @size;
+		height: @size;
+		border: none;
+		border-radius: 50%;
+		background-color: @red;
+		background-repeat: no-repeat;
+		background-size: 15px;
+		background-position: center;
+	}
+}
+
+.widget-address{
+	&:after{
+		background-image: 	url(../img/svg/placeholder-for-map.svg);
+	}
+}
+
+.widget-working-time{
+	&:after{
+		background-image: 	url("../img/svg/clock (2).svg");
+	}
+}
+
+.widget-phone{
+	&:after{
+		background-image: url(../img/svg/smartphone.svg);
+	}
+}
+
+.widget-email{
+	&:after{
+		background-image: url(../img/svg/mail.svg);
+	}
+}

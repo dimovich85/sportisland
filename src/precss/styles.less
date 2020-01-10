@@ -187,8 +187,11 @@ a{
 }
 
 .inner .main-content{
-	background-image: url(../img/index__finalScreen_bg.jpg);
-	.bg_normalize();
+	background-image: url(../img/inner_bg.jpg);
+	background-position: top center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	//.bg_normalize();
 	padding-top: 140px;
 	padding-bottom: 140px;
 }
@@ -768,5 +771,181 @@ a{
 		padding: 10px;
 		padding-left: 16px;
 		border-left: 1px solid #555;
+	}
+}
+
+/* services.html */
+
+.services-list{
+	&__item{
+		margin-bottom: 80px;
+	}
+}
+
+.service{
+	padding-right: 50%;
+	position: relative;
+	min-height: 464px;
+	&:nth-child(even){
+		padding-right: 0;
+		padding-left: calc(50% + 40px);
+		& .service__thumb{
+			left: 0;
+		}
+	}
+
+	&__name{
+		margin-bottom: 35px;
+	}
+
+	&__text{
+		font-size: 16px;
+		margin-bottom: 60px;
+	}
+
+	&__action{
+		display: flex;
+		align-items: center;
+	}
+
+	&__subscribe{
+		margin-right: 20px;
+	}
+
+	&__thumb{
+		margin: 0;
+		padding: 0;
+		display: block;
+		@offset: 20px;
+		position: absolute;
+		width: calc(50% - 20px);
+		max-width: 500px;
+		top: 0;
+		right: 20px;
+		bottom: 0;
+		background-color: @red;
+	}
+
+	&__img{
+		width: 100%;
+		position: relative;
+		top: -20px;
+		right: -20px;
+	}
+}
+
+/* trainers.html */
+
+.trainers{
+	&__h{
+		margin-bottom: 40px;
+	}
+}
+
+.trainers-list{
+	&__item{
+		margin-bottom: 15px;
+		padding: 20px 30px;
+		background-image: url(../img/trainers__trainer_bg.jpg);
+		background-size: cover;
+	}
+}
+
+.trainer{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__wrap{
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+
+	&__name{
+		font-size: 27px;
+		font-weight: @fBold;
+		margin-bottom: 20px;
+	}
+
+	&__text{
+		line-height: 30px;
+	}
+}
+
+/* schedule.html */
+
+.schedule-page{
+	&__h{
+		margin-bottom: 40px;
+	}
+}
+
+.tabs-btns{
+	margin-bottom: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&__item{
+		display: block;
+		padding: 5px 10px;
+		font-size: 18px;
+		font-weight: @fBold;
+		text-transform: uppercase;
+		& + &{
+			margin-left: 15px;
+		}
+
+		&.active-tab{
+			background-color: @red;
+		}
+	}
+
+	&__btn{
+		color: #fff;
+	}
+}
+
+.tabs-content{
+
+}
+
+.schedule{
+	border: 1px solid #555;
+	width: 100%;
+	font-size: 14px;
+	color: #999;
+	text-align: center;
+
+	tbody{
+		border: 1px solid #555;
+	}
+
+	td{
+		padding: 40px 10px;
+		border: 1px solid #555;
+	}
+
+	&__time{
+		width: 125px;
+		padding: 5px 10px;
+		border-radius: 17px;
+		background-color: #000;
+		margin: 0 auto;
+		margin-bottom: 15px;
+	}
+
+	&__h{
+		font-weight: @fBold;
+		font-size: 21px;
+		color: #fff;
+		margin-bottom: 15px;
+	}
+
+	&__trainer{
+		margin-bottom: 15px;
+	}
+
+	&__place{
+		color: #6a44aa;
 	}
 }

@@ -21,7 +21,7 @@
 					price: '1200' 
 				},
 				{ 
-					img: 'blog__category_thmb1.jpg',
+					img: 'services__service_pic3.jpg',
 					name: 'ЖЕНСКИЙ ФИТНЕС',
 					text: 'В клубе «SportIsland» вам предложат фитнес программы различных направлений и уровней подготовленности: как для новичков, так и для опытных атлетов. Поставьте себе цель и опытные тренеры приведут вас к телу вашей мечты!',
 					price: '2200' 
@@ -38,23 +38,23 @@
 
 		<ul class="services-list">
 		{% for service in services %}
-			<li class="services-list__item">
-				<article class="service">
-					<h2 class="service__name">
-						{{ service.name }}
-					</h2>
-					<p class="service__text">
-						{{ service.text }}
-					</p>
-					<p class="service__action">
-						<a href="#" class="service__subscribe btn">записаться</a>
-						<strong class="service__price price">
-							{{ service.price }}
-							<span class="price__unit">р./мес.</span>
-						</strong>
-					</p>
-					<img src="img/{{ service.img }}" alt="" class="service__thumb">
-				</article>
+			<li class="services-list__item service">
+				<h2 class="service__name main-heading">
+					{{ service.name }}
+				</h2>
+				<p class="service__text">
+					{{ service.text }}
+				</p>
+				<p class="service__action">
+					<a href="#" class="service__subscribe btn">записаться</a>
+					<strong class="service__price price">
+						{{ service.price }}
+						<span class="price__unit">р./мес.</span>
+					</strong>
+				</p>
+				<figure class="service__thumb">
+					<img src="img/{{ service.img }}" alt="" class="service__img">
+				</figure>
 			</li>
 		{% endfor %}
 		</ul>

@@ -10,7 +10,7 @@
 			] 
 		%}
 		{% include '_breadcrumbs.html' %}
-		<h1 class="page-heading">расписание</h1>
+		<h1 class="main-heading schedule-page__h">расписание</h1>
 		<div class="tabs">
 			<ul class="tabs-btns">
 			{% set days = [
@@ -23,7 +23,12 @@
 				['Вс', 'sun'] 
 			] %}
 			{% for day in days %}
-				<li class="tabs-btns__item">
+				{% if loop.index === 1 %}
+					{% set active = " active-tab" %}
+				{% else %}
+					{% set active = "" %}
+				{% endif %}
+				<li class="tabs-btns__item{{active}}">
 					<a href="#{{day[1]}}" class="tabs-btns__btn">
 						{{day[0]}}
 					</a>

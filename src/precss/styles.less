@@ -123,7 +123,8 @@ a{
 	.col();
 }
 
-.sr-only{
+.sr-only,
+.screen-reader-text{
 	position: absolute;
 	width: 1px;
 	height: 1px;
@@ -153,6 +154,13 @@ a{
 	font-weight: @fBlack;
 	color: #fff;
 	text-transform: uppercase;
+}
+
+.main-heading_404{
+	padding-top: 200px; 
+	padding-bottom: 200px; 
+	text-align: center; 
+	font-size: 6vw;
 }
 
 .page-heading{
@@ -223,6 +231,7 @@ a{
 .main-content{
 	position: relative;
 	z-index: 1;
+	background-attachment: fixed;
 }
 
 .banner{
@@ -545,6 +554,7 @@ a{
 	.size(4);
 	.size-sm(6);
 	.size-xs(10);
+	margin-bottom: 20px;
 
 	&__thumb{
 		margin-bottom: 20px;
@@ -596,6 +606,38 @@ a{
 		left: 0;
 		right: 0;
 		z-index: 2;
+	}
+}
+
+/* WP Pagination */
+
+.pagination.navigation{
+	color: #fff;
+	.nav-links{
+		width: 295px;
+		margin: 0 auto;
+		display: flex;
+		align-items: baseline;
+	}
+	.page-numbers{
+		display: block;
+		font-size: 18px;
+		@size: 40px;
+		width: @size;
+		height: @size;
+		color: #fff;
+		text-align: center;
+		padding: 10px 0;
+		&.current{
+			background-color: @red;
+		}
+		&.next,
+		&.prev{
+			display: none;
+		}
+		& + & {
+			margin-left: 20px;
+		}
 	}
 }
 

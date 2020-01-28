@@ -10,7 +10,6 @@
 		width: 295px;
 		margin: 0 auto;
 		display: flex;
-		justify-content: space-between;
 		align-items: baseline;
 	}
 	&__block{
@@ -27,6 +26,9 @@
 		&:active{
 			background-color: @red;
 			transition: background-color @transT;
+		}
+		& + &{
+			margin-left: 10px;
 		}
 	}
 	&__link{

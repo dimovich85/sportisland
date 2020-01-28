@@ -1,0 +1,88 @@
+.schedule-page{
+	&__h{
+		margin-bottom: 40px;
+	}
+}
+
+.tabs-btns{
+	margin-bottom: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&__item{
+		display: block;
+		padding: 5px 10px;
+		font-size: 18px;
+		font-weight: @fBold;
+		text-transform: uppercase;
+		& + &{
+			margin-left: 15px;
+		}
+
+		&.active-tab,
+		&:hover,
+		&:focus,
+		&:active{
+			background-color: @red;
+			transition: background-color @transT;
+		}
+	}
+
+	&__btn{
+		color: #fff;
+	}
+}
+
+.tabs-content{
+	&__item{
+		display: none;
+		&.active-tab{
+			display: block !important;
+		}
+	}
+
+	&__list{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+}
+
+.schedule{
+	border: 1px solid #555;
+	width: 100%;
+	font-size: 14px;
+	color: #999;
+	text-align: center;
+	.row();
+
+	&__item{
+		width: 25%;
+		border: 1px solid #555;
+		padding: 40px 10px;
+	}
+
+	&__time{
+		width: 125px;
+		padding: 5px 10px;
+		border-radius: 17px;
+		background-color: #000;
+		margin: 0 auto;
+		margin-bottom: 15px;
+	}
+
+	&__h{
+		font-weight: @fBold;
+		font-size: 21px;
+		color: #fff;
+		margin-bottom: 15px;
+	}
+
+	&__trainer{
+		margin-bottom: 15px;
+	}
+
+	&__place{
+		color: #6a44aa;
+	}
+}

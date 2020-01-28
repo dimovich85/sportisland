@@ -1,0 +1,57 @@
+.services-list{
+	&__item{
+		margin-bottom: 80px;
+	}
+}
+
+.service{
+	padding-right: 50%;
+	position: relative;
+	min-height: 464px;
+	&:nth-child(even){
+		padding-right: 0;
+		padding-left: calc(50% + 40px);
+		& .service__thumb{
+			left: 0;
+		}
+	}
+
+	&__name{
+		margin-bottom: 35px;
+	}
+
+	&__text{
+		font-size: 16px;
+		margin-bottom: 60px;
+	}
+
+	&__action{
+		display: flex;
+		align-items: center;
+	}
+
+	&__subscribe{
+		margin-right: 20px;
+	}
+
+	&__thumb{
+		margin: 0;
+		padding: 0;
+		display: block;
+		@offset: 20px;
+		position: absolute;
+		width: calc(50% - 20px);
+		max-width: 500px;
+		top: 0;
+		right: 20px;
+		bottom: 0;
+		background-color: @red;
+	}
+
+	&__img{
+		width: 100%;
+		position: relative;
+		top: -20px;
+		right: -20px;
+	}
+}

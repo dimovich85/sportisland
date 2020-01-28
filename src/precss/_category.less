@@ -1,0 +1,39 @@
+.category-posts{
+	&__h{
+		margin-bottom: 40px;
+	}
+}
+
+.pagination{
+	padding-top: 60px;
+	&__links{
+		width: 295px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+	}
+	&__block{
+		font-size: 18px;
+		@size: 40px;
+		width: @size;
+		height: @size;
+		position: relative;
+		z-index: 1;
+		&_current{
+			background-color: @red;
+		}
+	}
+	&__link{
+		display: block;
+		color: #fff;
+		position: absolute;
+		text-align: center;
+		padding: 10px 0;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 2;
+	}
+}

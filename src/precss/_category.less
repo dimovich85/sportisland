@@ -20,8 +20,13 @@
 		height: @size;
 		position: relative;
 		z-index: 1;
-		&_current{
+		background-color: transparent;
+		&_current,
+		&:hover,
+		&:focus,
+		&:active{
 			background-color: @red;
+			transition: background-color @transT;
 		}
 	}
 	&__link{

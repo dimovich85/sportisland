@@ -1,0 +1,281 @@
+.main-content{
+	position: relative;
+	z-index: 1;
+}
+
+.banner{
+	text-align: center;
+	height: 100vh;
+	background-image: url(../img/index__firstScreen_bg.jpg);
+	.bg_normalize();
+	background-attachment: fixed;
+	position: relative;
+	z-index: 1;
+
+	&__link{
+		position: absolute;
+		bottom: 12.4vh;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+
+.about{
+	padding-top: 200px;
+	padding-bottom: 200px;
+	background-image: url(../img/index__secondScreen_bg.jpg);
+	.bg_normalize();
+
+	&__flex{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__wrap{
+		.size(5);
+	}
+
+	&__h{
+		margin-bottom: 40px;
+	}
+
+	&__text{
+		font-size: 16px;
+		font-weight: @fNormal;
+		margin-bottom: 55px;
+	}
+
+	&__thumb{
+		@offset: -20px;
+		background-color: @red;
+		margin-right: -@offset;
+		margin-top: -@offset;
+		img{
+			position: relative;
+			top: @offset;
+			right: @offset;
+		}
+	}
+}
+
+.sales{
+	padding-top: 150px;
+	padding-bottom: 150px;
+	background-image: url(../img/index__redScreen_bg.jpg);
+	.bg_normalize();
+
+	&__header{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 70px;
+	}
+
+	&__btns{
+		display: flex;
+		justify-content: space-between;
+		width: 140px;
+	}
+
+	&__btn{
+		border: none;
+		@size: 60px;
+		width: @size;
+		height: @size;
+		background-color: #000;
+		position: relative;
+		cursor: pointer;
+		&:before{
+			content: '';
+			display: block;
+			@size: 18px;
+			width: @size;
+			height: @size;
+			@strokeWidth: 5px;
+			border-top: @strokeWidth solid #fff;
+			border-right: @strokeWidth solid #fff;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+		}
+		&_next{
+			&:before{
+				transform: translate(-50%, -50%) rotate(45deg);
+			}
+		}
+		&_prev{
+			&:before{
+				transform: translate(-50%, -50%) rotate(-135deg);
+			}
+		}
+		&:hover,
+		&:focus,
+		&:active{
+			background-color: #fff;
+			transition: @transT;
+			&:before{
+				border-color: #000;
+				transition: border-color @transT;
+			}
+		}
+	}
+
+	&__slider{
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.slider{
+	&__slide{
+		padding: 0 10px;
+	}
+}
+
+.stock{
+	&__link{
+		display: block;
+	}
+
+	&__thumb{
+		width: 100%;
+		margin-bottom: 50px;
+	}
+
+	&__h{
+		font-size: 24px;
+		font-weight: @fSemiBold;
+		color: #fff;
+		margin-bottom: 40px;
+		&:hover,
+		&:focus,
+		&:active{
+			color: #ddd;
+			transition: color @transT;
+		}
+	}
+
+	&__text{
+		color: #fff;
+		font-size: 15px;
+		font-weight: @fNormal;
+		line-height: 30px;
+		margin-bottom: 35px;
+		&:hover,
+		&:focus,
+		&:active{
+			color: #ddd;
+			transition: color @transT;
+		}
+	}
+
+	&__more{
+		color: #000;
+		&:hover,
+		&:focus,
+		&:active{
+			color: #fff;
+			transition: color @transT;
+			background-image: url(../img/icons/arrow_white.png);
+		}
+	}
+}
+
+.cards{
+	padding-top: 160px;
+	padding-bottom: 160px;
+	background-image: url(../img/index__finalScreen_bg.jpg);
+	.bg_normalize();
+	background-attachment: fixed;
+
+	&__h{
+		margin-bottom: 80px;
+	}
+
+	&__list{
+		list-style: none;
+		.xs-block({
+			justify-content: center;
+		});
+	}
+}
+
+.card{
+	.col();
+	.size(4);
+	.size-sm(6);
+	.size-xs(10);
+	padding-top: 50px;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-bottom: 190px;
+	margin-bottom: 35px;
+	position: relative;
+	&:nth-child(1){
+		background-image: url(../img/index__cards_card1.jpg);
+	}
+	&:nth-child(2){
+		background-image: url(../img/index__cards_card2.jpg);
+	}
+	&:nth-child(3){
+		background-image: url(../img/index__cards_card3.jpg);
+	}
+	.bg_normalize();
+
+	&_profitable{
+		.card__name{
+			color: @red;
+		}
+	}
+
+	&__name{
+		font-size: 27px;
+		font-weight: @fBold;
+		text-align: center;
+		margin-bottom: 20px;
+		text-transform: uppercase;
+	}
+
+	&__time{
+		font-size: 16px;
+		font-weight: @fNormal;
+		color: #999999;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+
+	&__price{
+		padding-bottom: 45px;
+		text-align: center;
+		margin: 0;
+	}
+
+	&__features{
+		padding: 0;
+		margin: 0;
+		margin-bottom: 20px;
+	}
+
+	&__feature{
+		font-size: 16px;
+		font-weight: @fNormal;
+		padding-left: 25px;
+		background-image: url(../img//icons/checkmark.png);
+		background-repeat: no-repeat;
+		background-size: 14px 14px;
+		background-position: left center;
+		& + &{
+			margin-top: 20px;
+		}
+	}
+
+	&__buy{
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		padding-left: 65px;
+		padding-right: 65px;
+		transform: translate(-50%, 50%);
+	}
+}

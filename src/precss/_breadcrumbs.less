@@ -10,10 +10,22 @@
 		padding-right: 5px;
 		&:last-child a{
 			color: #999999;
+			&:hover,
+			&:focus,
+			&:active{
+				color: #fff;
+				transition: color @transT;
+			}
 		}
 		& + &:before{
 			content: '/';
 			color: #fff;
+		}
+		a:hover,
+		a:focus,
+		a:active{
+			color: #777;
+			transition: color @transT;
 		}
 	}
 

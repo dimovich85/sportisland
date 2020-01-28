@@ -29,16 +29,6 @@ body{
 	background-color: @bg;
 }
 
-.btn-reset{
-	appearance: none;
-  	border-radius: 0;
-  	opacity: 1;
-	border: none;
-	background-color: transparent;
-	font: inherit;
-	cursor: pointer;
-}
-
 ::-webkit-scrollbar{
 	width: 10px;
 	height: 5px;
@@ -48,21 +38,6 @@ body{
 ::-webkit-scrollbar-thumb{
 	border-radius: 2px;
 	background-color: @scrollColor;
-}
-
-.ul-reset{
-	list-style: none;
-}
-
-.input{
-	font: inherit;
-	appearance: none;
-	opacity: 1;
-	transition: @transT;
-	&:focus{
-		outline: none;
-		box-shadow: 1px 1px 30px 1px rgba(60,86,166, 0.3);
-	}
 }
 
 img,
@@ -135,6 +110,7 @@ a{
 }
 
 .btn{
+	appearance: none;
 	display: inline-block;
 	background-color: @red;
 	color: #fff;
@@ -145,6 +121,12 @@ a{
 	padding: 25px 40px;
 	text-transform: uppercase;
 	line-height: 1;
+	&:hover,
+	&:active,
+	&:focus{
+		background-color: #ae0b0b;
+		transition: background-color @transT;
+	}
 }
 
 .main-heading,
@@ -170,6 +152,13 @@ a{
 	background-size: 21px 10px;
 	background-repeat: no-repeat;
 	background-position: right center;
+	&:hover,
+	&:active,
+	&:focus{
+		color: #fff;
+		transition: color @transT;
+		background-image: url(../img/icons/arrow_white.png);
+	}
 	&_inverse{
 		background-image: url(../img/icons/arrow_black.png);
 	}
@@ -191,7 +180,6 @@ a{
 	background-position: top center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	//.bg_normalize();
 	padding-top: 140px;
 	padding-bottom: 140px;
 }
@@ -330,6 +318,16 @@ a{
 				transform: translate(-50%, -50%) rotate(-135deg);
 			}
 		}
+		&:hover,
+		&:focus,
+		&:active{
+			background-color: #fff;
+			transition: @transT;
+			&:before{
+				border-color: #000;
+				transition: border-color @transT;
+			}
+		}
 	}
 
 	&__slider{
@@ -362,6 +360,12 @@ a{
 		font-weight: @fSemiBold;
 		color: #fff;
 		margin-bottom: 40px;
+		&:hover,
+		&:focus,
+		&:active{
+			color: #ddd;
+			transition: color @transT;
+		}
 	}
 
 	&__text{
@@ -370,10 +374,23 @@ a{
 		font-weight: @fNormal;
 		line-height: 30px;
 		margin-bottom: 35px;
+		&:hover,
+		&:focus,
+		&:active{
+			color: #ddd;
+			transition: color @transT;
+		}
 	}
 
 	&__more{
 		color: #000;
+		&:hover,
+		&:focus,
+		&:active{
+			color: #fff;
+			transition: color @transT;
+			background-image: url(../img/icons/arrow_white.png);
+		}
 	}
 }
 
@@ -663,6 +680,16 @@ a{
 
 	&__like{
 		color: #666666;
+		&:hover,
+		&:active,
+		&:focus{
+			color: #fff;
+			transition: color @transT;
+			path{
+				fill: #fff;
+				transition: fill @transT;
+			}
+		}
 	}
 }
 
@@ -895,8 +922,12 @@ a{
 			margin-left: 15px;
 		}
 
-		&.active-tab{
+		&.active-tab,
+		&:hover,
+		&:focus,
+		&:active{
 			background-color: @red;
+			transition: background-color @transT;
 		}
 	}
 
@@ -906,7 +937,12 @@ a{
 }
 
 .tabs-content{
-
+	&__item{
+		display: none;
+		&.active-tab{
+			display: block !important;
+		}
+	}
 }
 
 .schedule{

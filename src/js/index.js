@@ -45,4 +45,5 @@ $modalCloser.on('click', e => {
 	e.preventDefault();
 	const active = $('.modal.active, .modal .active');
 	active.removeClass('active');
+	$('body').removeClass('ov-h');
 });

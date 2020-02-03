@@ -47,3 +47,19 @@ $modalCloser.on('click', e => {
 	active.removeClass('active');
 	$('body').removeClass('ov-h');
 });
+
+/* Post ID */
+
+const $postIdBtn = $('[href="#modal-form"]');
+
+$postIdBtn.on('click', e => {
+	e.preventDefault();
+	const $target = $(e.target);
+	const ID = $target.attr('data-post-id');
+	const form = $($target.attr('href'));
+	const input = document.createElement('input');
+	input.setAttribute('type', 'hidden');
+	input.setAttribute('name', 'form-post-id');
+	input.setAttribute('value', ID);
+	form.append(input);
+});

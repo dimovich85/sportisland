@@ -56,7 +56,8 @@ $postIdBtn.on('click', e => {
 	e.preventDefault();
 	const $target = $(e.target);
 	const ID = $target.attr('data-post-id');
-	const form = $($target.attr('href'));
+	const formContainer = $($target.attr('href'));
+	const form = formContainer.find('form');
 	const input = document.createElement('input');
 	input.setAttribute('type', 'hidden');
 	input.setAttribute('name', 'form-post-id');

@@ -60,24 +60,18 @@
 	@size: 36px;
 	width: @size;
 	height: @size;
-	background-size: 15px;
-	background-position: center;
-	background-repeat: no-repeat;
 	border: 1px solid #18191b;
+	position: relative;
+	svg{
+		width: 15px;
+		height: 15px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
 	& + &{
 		margin-left: 15px;
-	}
-	&.fb{
-		background-image: url(../img/svg/facebook-app-symbol.svg);
-	}
-	&.vk{
-		background-image: url(../img/svg/vk.svg);
-	}
-	&.youtube{
-		background-image: url(../img/svg/youtube-symbol.svg);
-	}
-	&.insta{
-		background-image: url(../img/svg/instagram.svg);		
 	}
 	&:hover,
 	&:focus,

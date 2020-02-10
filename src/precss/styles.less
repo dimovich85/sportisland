@@ -170,7 +170,6 @@ a{
 	&:active,
 	&:focus{
 		color: #fff;
-		transition: color @transT;
 		background-image: url(../img/icons/arrow_white.png);
 	}
 	&_inverse{
@@ -212,6 +211,27 @@ a{
 	background-size: 15px;
 	background-position: left center;
 	background-repeat: no-repeat;
+	position: relative;
+	svg{
+		width: 15px;
+		height: 15px;
+		position: absolute;
+		top: 50%;
+		left: 0%;
+		transform: translateY(-50%);
+	}
+	path{
+		fill: #666;
+	}
+	&:hover,
+	&:active,
+	&:focus,
+	&.like_liked{
+		color: #fff;
+		path{
+			fill: #fff;
+		}
+	}
 }
 
 /* General */

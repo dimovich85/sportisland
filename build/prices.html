@@ -161,10 +161,10 @@
     </main>
     <div class="modal">
       <div class="wrapper">
-        <button class="modal__closer">
-          <span class="sr-only">Закрыть</span>
-        </button>
         <section class="modal-content modal-form" id="modal-form">
+          <button class="modal__closer">
+            <span class="sr-only">Закрыть</span>
+          </button>
           <form action="#" class="modal-form__form">
             <h2 class="modal-content__h"> Отправить заявку </h2>
             <p> Оставьте свои контакты и менеджер с Вами свяжется </p>
@@ -177,7 +177,7 @@
             <p>
               <label>
                 <span class="sr-only">Телефон:</span>
-                <input type="text" name="si-user-phone" placeholder="Телефон">
+                <input type="text" name="si-user-phone" placeholder="Телефон" pattern="^\+{0,1}[0-9]{4,}$">
               </label>
             </p>
             <button class="btn" type="submit">Отправить</button>
@@ -228,16 +228,16 @@
             </p>
           </div>
           <div class="main-footer__widget main-footer__widget_social">
-            <a href="#" class="widget-social-links fb">
+            <a target="_blank" href="#" class="widget-social-links fb">
               <span class="sr-only"> Мы в Facebook! </span>
             </a>
-            <a href="#" class="widget-social-links vk">
+            <a target="_blank" href="#" class="widget-social-links vk">
               <span class="sr-only"> Мы в VK! </span>
             </a>
-            <a href="#" class="widget-social-links youtube">
+            <a target="_blank" href="#" class="widget-social-links youtube">
               <span class="sr-only"> Мы в YouTube! </span>
             </a>
-            <a href="#" class="widget-social-links insta">
+            <a target="_blank" href="#" class="widget-social-links insta">
               <span class="sr-only"> Мы в Instagram! </span>
             </a>
           </div>

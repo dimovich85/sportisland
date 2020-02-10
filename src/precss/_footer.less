@@ -68,7 +68,7 @@
 			content: '';
 			display: block;
 			position: absolute;
-			border-bottom: 1px solid #777;
+			border-bottom: 1px solid #fff;
 			top: 50%;
 			width: 100%;
 			left: 0;
@@ -84,7 +84,7 @@
 		&:active{
 			&:before,
 			&:after{
-				border-bottom-color: #fff;
+				border-bottom-color: @red;
 				transition: border-bottom-color @transT;
 			}
 		}
@@ -92,6 +92,7 @@
 }
 
 .modal-content{
+	box-shadow: 0 0 15px 3px #777;
 	padding: 40px 10px;
 	position: absolute;
 	z-index: 99999;

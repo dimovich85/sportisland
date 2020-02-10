@@ -108,7 +108,7 @@
             <li class="card">
               <h3 class="card__name"> полный день </h3>
               <p class="card__time"> 7:00 &ndash; 22:00 </p>
-              <p class="card__price price"> 3200 <span class="price__unit">р.-/мес.</span>
+              <p class="card__price price"> 3200 <span class="price__unit" aria-label="рублей в месяц">р.-/мес.</span>
               </p>
               <ul class="card__features">
                 <li class="card__feature">Безлимит посещений клуба</li>
@@ -121,7 +121,7 @@
             <li class="card card_profitable">
               <h3 class="card__name"> полный день </h3>
               <p class="card__time"> 7:00 &ndash; 22:00 </p>
-              <p class="card__price price"> 3200 <span class="price__unit">р.-/мес.</span>
+              <p class="card__price price"> 3200 <span class="price__unit" aria-label="рублей в месяц">р.-/мес.</span>
               </p>
               <ul class="card__features">
                 <li class="card__feature">Безлимит посещений клуба</li>
@@ -134,7 +134,20 @@
             <li class="card">
               <h3 class="card__name"> полный день </h3>
               <p class="card__time"> 7:00 &ndash; 22:00 </p>
-              <p class="card__price price"> 3200 <span class=" price__unit">р.-/мес.</span>
+              <p class="card__price price"> 3200 <span class="price__unit" aria-label="рублей в месяц">р.-/мес.</span>
+              </p>
+              <ul class="card__features">
+                <li class="card__feature">Безлимит посещений клуба</li>
+                <li class="card__feature">Вводный инструктаж</li>
+                <li class="card__feature">Групповые занятия</li>
+                <li class="card__feature">Сауна</li>
+              </ul>
+              <a data-post-id="99" href="#modal-form" class="card__buy btn btn_modal">купить</a>
+            </li>
+            <li class="card">
+              <h3 class="card__name"> полный день </h3>
+              <p class="card__time"> 7:00 &ndash; 22:00 </p>
+              <p class="card__price price"> 3200 <span class="price__unit" aria-label="рублей в месяц">р.-/мес.</span>
               </p>
               <ul class="card__features">
                 <li class="card__feature">Безлимит посещений клуба</li>
@@ -150,10 +163,10 @@
     </main>
     <div class="modal">
       <div class="wrapper">
-        <button class="modal__closer">
-          <span class="sr-only">Закрыть</span>
-        </button>
         <section class="modal-content modal-form" id="modal-form">
+          <button class="modal__closer">
+            <span class="sr-only">Закрыть</span>
+          </button>
           <form action="#" class="modal-form__form">
             <h2 class="modal-content__h"> Отправить заявку </h2>
             <p> Оставьте свои контакты и менеджер с Вами свяжется </p>
@@ -166,7 +179,7 @@
             <p>
               <label>
                 <span class="sr-only">Телефон:</span>
-                <input type="text" name="si-user-phone" placeholder="Телефон">
+                <input type="text" name="si-user-phone" placeholder="Телефон" pattern="^\+{0,1}[0-9]{4,}$">
               </label>
             </p>
             <button class="btn" type="submit">Отправить</button>
@@ -217,16 +230,16 @@
             </p>
           </div>
           <div class="main-footer__widget main-footer__widget_social">
-            <a href="#" class="widget-social-links fb">
+            <a target="_blank" href="#" class="widget-social-links fb">
               <span class="sr-only"> Мы в Facebook! </span>
             </a>
-            <a href="#" class="widget-social-links vk">
+            <a target="_blank" href="#" class="widget-social-links vk">
               <span class="sr-only"> Мы в VK! </span>
             </a>
-            <a href="#" class="widget-social-links youtube">
+            <a target="_blank" href="#" class="widget-social-links youtube">
               <span class="sr-only"> Мы в YouTube! </span>
             </a>
-            <a href="#" class="widget-social-links insta">
+            <a target="_blank" href="#" class="widget-social-links insta">
               <span class="sr-only"> Мы в Instagram! </span>
             </a>
           </div>

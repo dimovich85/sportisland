@@ -41,11 +41,18 @@ $modalBtn.on('click', e => {
 	$('body').addClass('ov-h');
 });
 
-$modalCloser.on('click', e => {
+const closeFunc = e => {
 	e.preventDefault();
 	const active = $('.modal.active, .modal .active');
 	active.removeClass('active');
 	$('body').removeClass('ov-h');
+}
+
+$modalCloser.on('click', closeFunc);
+
+$(window).on('keydown', e => {
+	if( e.key == 'Escape' )
+		closeFunc(e);
 });
 
 /* Post ID */

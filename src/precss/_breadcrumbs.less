@@ -29,7 +29,28 @@
 		}
 	}
 
-	&__link{
+	&__link, a{
 		color: #fff;
+		margin: 0;
+		margin-left: 5px;
+		margin-right: 5px;
+		&.home{
+			margin-left: 0;
+		}
+		&:hover,
+		&:focus,
+		&:active{
+			transition: color @transT;
+			color: #777;
+		}
+	}
+	.current-item{
+		color: #999;
+		&:hover,
+		&:focus,
+		&:active{
+			transition: color @transT;
+			color: #fff;
+		}
 	}
 }

@@ -1,13 +1,49 @@
 import $ from 'jquery';
 import 'slick-carousel';
 
+/* Mobile menu */
+
+const $mobileBtn = $('.main-header__mobile');
+
+$mobileBtn.on('click', e =>{
+	e.preventDefault();
+	const $target = $(e.target);
+	if( !$target.hasClass('closer') ){
+		$target.addClass('closer');
+		$target.parents('.main-header__wrap')
+		   	   .find('.main-navigation')
+		   	   .addClass('active');
+		$target.parents('.main-header__wrap')
+		       .find('.main-header__widget')
+		       .addClass('active');
+		$('body').addClass('ov-h');
+	} else{
+		$target.removeClass('closer');
+		$target.parents('.main-header__wrap')
+		       .find('.main-navigation')
+		       .removeClass('active');
+		$target.parents('.main-header__wrap')
+		       .find('.main-header__widget')
+		       .removeClass('active');
+		$('body').removeClass('ov-h');
+	}
+});
+
 /* Slider */
 
 $('.slider').slick({
 	autoplay: true,
 	slidesToShow: 2,
 	nextArrow: '.sales__btn_next',
-	prevArrow: '.sales__btn_prev'
+	prevArrow: '.sales__btn_prev',
+	responsive: [
+	    {
+	      breakpoint: 700,
+	      settings: {
+	        slidesToShow: 1
+	      }
+	    }
+	]
 });
 
 /* Tabs */

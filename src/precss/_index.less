@@ -7,6 +7,9 @@
 	text-align: center;
 	height: 100vh;
 	background-image: url(../img/index__firstScreen_bg.jpg);
+	.media(726px, {
+		background-image: url(../img/index__firstScreen_bg-notext.jpg);
+	});
 	.bg_normalize();
 	background-attachment: fixed;
 	position: relative;
@@ -24,26 +27,41 @@
 .about{
 	padding-top: 200px;
 	padding-bottom: 200px;
+	.media(939px, {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	});
 	background-image: url(../img/index__secondScreen_bg.jpg);
 	.bg_normalize();
 
 	&__flex{
 		display: flex;
 		justify-content: space-between;
+		.media(939px, {
+			flex-wrap: wrap;
+			justify-content: flex-start;
+		});
 	}
 
 	&__wrap{
 		.size(5);
+		.media(939px, {
+			.size(12);
+			margin-bottom: 50px;
+			text-align: center;
+		});
 	}
 
 	&__h{
 		margin-bottom: 40px;
+		text-align: left;
 	}
 
 	&__text{
 		font-size: 16px;
 		font-weight: @fNormal;
 		margin-bottom: 55px;
+		text-align: left;
 	}
 
 	&__thumb{
@@ -55,13 +73,27 @@
 			position: relative;
 			top: @offset;
 			right: @offset;
+			.media(939px, {
+				top: 0;
+				right: 0;
+			});
 		}
+		.media(939px, {
+			margin: 0;
+			width: 100%;
+			background-color: transparent;
+			text-align: center;
+		});
 	}
 }
 
 .sales{
 	padding-top: 150px;
 	padding-bottom: 150px;
+	.media(852px, {
+		padding-top: 75px;
+		padding-bottom: 75px;
+	});
 	background-image: url(../img/index__redScreen_bg.jpg);
 	.bg_normalize();
 
@@ -76,6 +108,9 @@
 		display: flex;
 		justify-content: space-between;
 		width: 140px;
+		.media(676px, {
+			display: none;
+		});
 	}
 
 	&__btn{
@@ -184,6 +219,10 @@
 .cards{
 	padding-top: 160px;
 	padding-bottom: 160px;
+	.media(852px, {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	});
 	background-image: url(../img/index__finalScreen_bg.jpg);
 	.bg_normalize();
 	background-attachment: fixed;

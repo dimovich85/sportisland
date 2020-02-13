@@ -1,38 +1,90 @@
 .footer{
 	padding-top: 50px;
 	padding-bottom: 25px;
+	.media(550px, {
+		padding-top: 20px;
+	});
 	background-color: @bg;
 	.main-header{
 		margin-bottom: 0;
 		padding-top: 5px;
 		padding-bottom: 35px;
+		.media(1040px; {
+			height: auto;
+		});
+
+		&__wrap{
+			flex-wrap: wrap;
+			.media(550px, {
+				flex-direction: column;
+				align-items: center;
+			});
+		}
+
+		&__widget{
+			margin: 0;
+			margin-top: 20px;
+		}
 	}
 	.slogan{
 		color: #999999;
 		font-weight: @fNormal;
 		font-size: 11px;
 	}
+
+	.main-navigation{
+		display: block;
+		.media(1040px, {
+			order: 1;
+			width: 100%;
+			margin-top: 30px;
+			padding-bottom: 10px;
+			overflow-x: auto;
+		});
+	}
+
+	.main-header__widget{
+		display: block;
+	}
 }
 
 .main-footer{
 	border-top: 1px solid #1f2021;
 	padding-top: 35px;
+	.xs-block({
+		padding-top: 10px;
+		text-align: center;
+	});
 
 	&__row{
 		align-items: center;
+		.media(800px, {
+			justify-content: space-between;
+		});
 	}
 
 	&__widget{
 		.col();
 		.size(4);
 		.size-sm(6);
+		.size-xs(12);
+		margin-top: 30px;
 		color: #999999;
 
 		&_copyright{
 			font-size: 14px;
+			.media(800px, {
+				order: 1;
+				width: 100% !important;
+				text-align: center;
+				margin-top: 30px;
+			});
 		}
 		&_social{
 			text-align: right;
+			.xs-block({
+				text-align: center;
+			});
 		}
 	}
 }

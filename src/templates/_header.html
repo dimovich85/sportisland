@@ -34,5 +34,10 @@
 				ул. Приречная 11
 			</p>
 		</address>
+		{% if position != "footer" %}
+		<button class="main-header__mobile">
+			<span class="sr-only">Открыть мобильное меню</span>
+		</button>
+		{% endif %}
 	</div>
 </header>

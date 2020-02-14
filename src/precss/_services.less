@@ -1,11 +1,30 @@
 .services-list{
 	&__item{
 		margin-bottom: 80px;
+		.media(1040px, {
+			margin-bottom: 50px;
+		});
+
+		.media(630px, {
+			padding: 0;
+			margin: 0;
+			margin-bottom: 50px;
+		});
 	}
+	.media(1040px, {
+		.row();
+	});
+
+	.media(630px, {
+		display: block;
+		padding: 0;
+		margin: 0;
+		margin-bottom: 30px;
+	});
 }
 
 .service{
-	padding-right: 50%;
+	padding-right: calc(50% + 40px);
 	position: relative;
 	min-height: 464px;
 	&:nth-child(even){
@@ -14,7 +33,21 @@
 		& .service__thumb{
 			left: 0;
 		}
+		.media(1040px, {
+			padding: 0;
+		});
 	}
+
+	.media(1040px, {
+		.col();
+		.size(10);
+		padding: 0;
+		min-height: unset;
+	});
+
+	.media(630px, {
+		width: 100%;
+	});
 
 	&__name{
 		margin-bottom: 35px;
@@ -46,6 +79,19 @@
 		right: 20px;
 		bottom: 0;
 		background-color: @red;
+		.media(1040px, {
+			display: none;
+		});
+
+		.media(630px, {
+			display: block;
+			position: static;
+			width: 100%;
+			background-color: transparent;
+			text-align: center;
+			margin-top: 20px;
+			max-width: unset;
+		});
 	}
 
 	&__img{
@@ -53,5 +99,14 @@
 		position: relative;
 		top: -20px;
 		right: -20px;
+		.media(630px, {
+			position: static;
+		});
+	}
+
+	&__price{
+		.media(630px, {
+			font-size: 30px;
+		});
 	}
 }

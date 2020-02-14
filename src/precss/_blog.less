@@ -13,6 +13,9 @@
 .last-post{
 	&__link{
 		display: flex;
+		.media(700px, {
+			flex-wrap: wrap;
+		});
 	}
 
 	&__thumb{
@@ -20,15 +23,28 @@
 		padding: 0;
 		width: 25%;
 		flex-shrink: 0;
+		.media(1000px, {
+			width: 40%;
+		});
+		.media(700px, {
+			width: 100%;
+			margin-bottom: 20px;
+		});
 	}
 
 	&__img{
 		display: block;
+		.media(400px, {
+			width: 100%;
+		});
 	}
 
 	&__wrap{
 		flex-grow: 1;
 		padding-left: 25px;
+		.media(700px, {
+			padding-left: 0;
+		});
 	}
 
 	&__h{
@@ -67,7 +83,7 @@
 	.col();
 	.size(4);
 	.size-sm(6);
-	.size-xs(10);
+	.size-xs(12);
 	margin-bottom: 20px;
 
 	&__thumb{
@@ -78,5 +94,6 @@
 		font-size: 24px;
 		color: #fff;
 		font-weight: @fBold;
+		display: block;
 	}
 }

@@ -66,6 +66,7 @@ tabHeads.on('click', function(event){
 
 const $modalBtn = $('.btn_modal');
 const $modalCloser = $('.modal__closer');
+const $overlay = $('.modal');
 
 $modalBtn.on('click', e => {
 	e.preventDefault();
@@ -85,6 +86,7 @@ const closeFunc = e => {
 }
 
 $modalCloser.on('click', closeFunc);
+$overlay.on('click', closeFunc);
 
 $(window).on('keydown', e => {
 	if( e.key == 'Escape' )

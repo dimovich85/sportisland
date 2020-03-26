@@ -80,15 +80,17 @@ $modalBtn.on('click', e => {
 
 const closeFunc = e => {
 	e.preventDefault();
-	if( $(e.target).is('.modal__closer, .modal, .wrapper') ){
-		const active = $('.modal.active, .modal .active');
-		active.removeClass('active');
-		$('body').removeClass('ov-h');
-	}
+	const active = $('.modal.active, .modal .active');
+	active.removeClass('active');
+	$('body').removeClass('ov-h');
 }
 
 $modalCloser.on('click', closeFunc);
-$overlay.on('click', closeFunc);
+$overlay.on('click', e => {
+	if( $(e.target).is('.modal__closer, .modal, .wrapper') ){
+		closeFunc(e);
+	}
+});
 
 $(window).on('keydown', e => {
 	if( e.key == 'Escape' )

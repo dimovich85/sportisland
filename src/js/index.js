@@ -80,9 +80,11 @@ $modalBtn.on('click', e => {
 
 const closeFunc = e => {
 	e.preventDefault();
-	const active = $('.modal.active, .modal .active');
-	active.removeClass('active');
-	$('body').removeClass('ov-h');
+	if( $(e.target).is('.modal__closer, .modal, .wrapper') ){
+		const active = $('.modal.active, .modal .active');
+		active.removeClass('active');
+		$('body').removeClass('ov-h');
+	}
 }
 
 $modalCloser.on('click', closeFunc);

@@ -86,7 +86,11 @@ const closeFunc = e => {
 }
 
 $modalCloser.on('click', closeFunc);
-$overlay.on('click', closeFunc);
+$overlay.on('click', e => {
+	if( $(e.target).is('.modal, .wrapper, .modal__closer') ){
+		closeFunc(e);
+	}
+});
 
 $(window).on('keydown', e => {
 	if( e.key == 'Escape' )

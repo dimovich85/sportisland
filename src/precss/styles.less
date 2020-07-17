@@ -189,11 +189,18 @@ a{
 	color: #fff;
 	&__unit{
 		color: #999999;
-		font-size: 18px;
+		font-size: 0.375em;
 		font-weight: @fNormal;
+		.media(380px, {
+			font-size: 0.575em;
+		});
 	}
-	.media(630px, {
-		font-size: 30px;
+	.media(460px, {
+		font-size: 38px;
+	});
+
+	.media(380px, {
+		font-size: 26px;
 	});
 }
 

@@ -10,8 +10,20 @@
 		display: flex;
 		align-items: center;
 		margin-bottom: 70px;
+		.media(850px, {
+			overflow: auto;
+			padding: 4px 0;
+		});
 		& > * + *{
 			margin-left: 45px;
+			.media(850px, {
+				margin-left: 20px;
+			});
+		}
+		& > *{
+			.media(850px, {
+				min-width: 170px;
+			});
 		}
 	}
 		
@@ -51,6 +63,9 @@
 		&_textarea{
 			width: 100%;
 		}
+		.media(750px, {
+			width: 100%;
+		});
 	}
 	&__input,
 	&__textarea{
@@ -78,6 +93,9 @@
 
 	&__btn{
 		margin-left: auto;
+		.media(500px, {
+			width: 100%;
+		});
 	}
 	br{
 		display: none;

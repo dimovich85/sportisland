@@ -204,24 +204,29 @@ a{
 	});
 }
 
-.inner .main-content{
-	background-image: url(../img/inner_bg.jpg);
-	background-position: top center;
-	background-attachment: fixed;
-	background-size: cover;
-	background-repeat: no-repeat;
-	padding-top: 140px;
-	padding-bottom: 140px;
-	.media(630px, {
-		padding-top: 100px;
-		padding-bottom: 70px;
-	});
-}
+.inner{
+	.main-content{
+		background-image: url(../img/inner_bg.jpg);
+		background-position: top center;
+		background-attachment: fixed;
+		background-size: cover;
+		background-repeat: no-repeat;
+		padding-top: 140px;
+		padding-bottom: 140px;
+		.media(630px, {
+			padding-top: 100px;
+			padding-bottom: 70px;
+		});
+	}
 
-.inner .cards{
-	background-image: unset;
-	&__h{
-		margin-bottom: 45px;
+	.cards{
+		background-image: unset;
+		&__h{
+			margin-bottom: 45px;
+		}
+		.media(852px, {
+			padding-top: 160px;
+		});
 	}
 }
 

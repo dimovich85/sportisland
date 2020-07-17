@@ -15,8 +15,17 @@
 		font-size: 18px;
 		font-weight: @fBold;
 		text-transform: uppercase;
+		.media(500px, {
+			font-size: 14px;
+		});
+		.media(360px, {
+			font-size: 12px;
+		});
 		& + &{
 			margin-left: 15px;
+			.media(400px, {
+				margin-left: 5px;
+			});
 		}
 
 		&.active-tab,
@@ -34,11 +43,18 @@
 }
 
 .tabs-content{
+	.media(800px, {
+		overflow: auto;
+	});
 	&__item{
 		display: none;
+		padding: 0 15px;
 		&.active-tab{
 			display: block !important;
 		}
+		.media(800px, {
+			min-width: 800px;
+		});
 	}
 
 	&__list{
